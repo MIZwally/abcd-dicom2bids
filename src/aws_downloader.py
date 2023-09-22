@@ -9,7 +9,7 @@ import sys
 import argparse
 
 #######################################
-# Read in ABCD_good_and_bad_series_table.csv (renamed to ABCD_operator_QC.csv) that is continually updated
+# Read in 'abcd_fastqc01_reformatted.csv' that is continually updated
 #   Create a log of all subjects that have been checked
 #   If they are not able to be processed report what is wrong with them
 #
