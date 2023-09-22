@@ -136,8 +136,8 @@ def main(argv=sys.argv):
             uid = sub.split(uid_start, 1)[1]
             pguid = 'NDAR_INV' + ''.join(uid)
             bids_id = 'sub-NDARINV' + ''.join(uid)
-            subject_df = series_df[series_df['pGUID'] == pguid]
-            for year in year_list:
+            subject_year_list=list(set(subject_df['EventName']))
+            for year in subject_year_list:
                 sub_ses_df = subject_df[subject_df['EventName'] == year]
                 sub_pass_QC_df = sub_ses_df # changed to include all data, not just data with QC == 1.0
                 file_paths = []
